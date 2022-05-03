@@ -12,14 +12,14 @@
           <div class="container">
             <div class="row">
               <div class="col">
-                <div class="row">
+                <div class="row links_bar">
                   <div class="col">
                     <ul>
                       <li>
                         <h3>{{ footerLinks[0].title }}</h3>
                       </li>
                       <li v-for="link in footerLinks[0].details" :key="link">
-                        {{ link }}
+                        <span>{{ link }}</span>
                       </li>
                     </ul>
                     <ul>
@@ -27,7 +27,7 @@
                         <h3>{{ footerLinks[1].title }}</h3>
                       </li>
                       <li v-for="link in footerLinks[1].details" :key="link">
-                        {{ link }}
+                        <span>{{ link }}</span>
                       </li>
                     </ul>
                   </div>
@@ -37,24 +37,49 @@
                         <h3>{{ footerLinks[2].title }}</h3>
                       </li>
                       <li v-for="link in footerLinks[2].details" :key="link">
-                        {{ link }}
+                        <span>{{ link }}</span>
                       </li>
                     </ul>
                   </div>
                   <div class="col">
-                     <ul>
+                    <ul>
                       <li>
-                        <h3>{{ footerLinks[2].title }}</h3>
+                        <h3>{{ footerLinks[3].title }}</h3>
                       </li>
-                      <li v-for="link in footerLinks[2].details" :key="link">
-                        {{ link }}
+                      <li v-for="link in footerLinks[3].details" :key="link">
+                        <span>{{ link }}</span>
                       </li>
                     </ul>
                   </div>
                 </div>
               </div>
               <div class="col">
-                <img class="logo_bg" src="@/assets/img/dc-logo-bg.png" alt="">
+                <img class="logo_bg" src="@/assets/img/dc-logo-bg.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer_banner">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <button><h3>Sign Up Now</h3></button>
+              </div>
+              <div class="col">
+                <img
+                  src="@/assets/img/footer-facebook.png"
+                  alt="facebook icon"
+                />
+                <img src="@/assets/img/footer-twitter.png" alt="twitter icon" />
+                <img src="@/assets/img/footer-youtube.png" alt="youtube icon" />
+                <img
+                  src="@/assets/img/footer-pinterest.png"
+                  alt="pinterest icon"
+                />
+                <img
+                  src="@/assets/img/footer-periscope.png"
+                  alt="periscope icon"
+                />
               </div>
             </div>
           </div>
@@ -133,7 +158,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 1rem;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -178,18 +202,47 @@ footer {
     overflow: hidden;
     background-size: cover;
     background-repeat: no-repeat;
+    .container > .row {
+      height: 28rem;
+      align-items: center;
+      .col {
+        color: white;
+        text-transform: uppercase;
+        text-align: start;
+        margin-right: 1rem;
+        .links_bar {
+          align-items: flex-start;
+        }
 
-  }
-  .row {
-        height: 25rem;
-    .col {
-      color: white;
-      text-transform: uppercase;
-      ul h3 {
-        font-size: 1.5rem;
+        ul li {
+          margin-bottom: 0.2rem;
+          span {
+            opacity: 0.5;
+            font-size: 0.7rem;
+          }
+          h3 {
+            opacity: unset;
+          }
+        }
       }
-      ul li {
-        font-size: 0.8rem;
+    }
+  }
+  .footer_banner {
+    background-color: #303030;
+    padding: 2rem;
+    .row {
+      justify-content: space-between;
+
+      .col img{
+        padding: 0 0.8rem;
+      }
+      button{
+        border: unset;
+        color: white;
+        padding: 1rem;
+        background-color: unset;
+        border: 2px solid #0282f9;
+
       }
     }
   }

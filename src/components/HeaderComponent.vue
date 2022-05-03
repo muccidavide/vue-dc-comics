@@ -44,6 +44,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 header {
+  padding: 1.2rem;
   .site_logo img {
     width: 80px;
   }
