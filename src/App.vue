@@ -4,8 +4,11 @@
       <HeaderSite />
 
       <main id="main_site">
-        <MainProducts></MainProducts>
+        <div class="jumbotron">
+          <img src="@/assets/img/jumbotron.jpg" alt="">
+        </div>
 
+        <MainProducts></MainProducts>
         <MainNav></MainNav>
       </main>
       <FooterSite></FooterSite>
@@ -32,4 +35,9 @@ export default {
 
 <style lang="scss">
 @import "~@/assets/scss/style.scss";
+
+.jumbotron{
+  height: 450px;
+  overflow: hidden;
+}
 </style>

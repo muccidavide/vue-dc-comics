@@ -1,6 +1,9 @@
 <template>
   <div class="products">
     <div class="container">
+      <div>
+        <button class="series_btn"><h2>Current Series</h2></button>
+      </div>
       <div class="row">
         <div class="col-2" v-for="card in cards" :key="card.series">
           <div class="img_box">
@@ -10,16 +13,15 @@
         </div>
       </div>
       <div>
-        <button>Load More</button>
+        <button class="load_btn">Load More</button>
       </div>
     </div>
   </div>
 </template>
 <script>
-
-export default({
-    name:"MainProducts",
-     data() {
+export default {
+  name: "MainProducts",
+  data() {
     return {
       cards: [
         {
@@ -109,26 +111,38 @@ export default({
       ],
     };
   },
-})
+};
 </script>
 
 
 <style lang="scss" scoped>
 .products {
   background-color: $dc-dark;
+  .container{
+      position: relative;
+  }
+  .series_btn{
+      @include button;
+      background: $dc-primary;
+      position: absolute;
+      left: 0;
+      transform: translateY(-50%);
+      padding: 0.3rem 1rem;
+  }
   .row {
+      padding-top: 1rem;
     flex-wrap: wrap;
     .col-2 {
       width: calc(100% / 6);
-      padding: 2rem 1rem;
+      padding: 1rem 1rem;
       text-align: left;
+      min-height: 250px;
 
-      .img_box{
-      
-      aspect-ratio: 1/1;
-      overflow: hidden;
-      margin-bottom: 1rem;
-        img{
+      .img_box {
+        aspect-ratio: 1/1;
+        overflow: hidden;
+        margin-bottom: 1rem;
+        img {
           width: 100%;
         }
       }
@@ -138,12 +152,12 @@ export default({
       }
     }
   }
-   button {
-        @include button;
-        background: $dc-primary;
-        padding: 0.5rem;
-        width: 200px;
-        margin-bottom: 1rem;
-      }
+  .load_btn {
+    @include button;
+    background: $dc-primary;
+    padding: 0.5rem;
+    width: 200px;
+    margin-bottom: 1rem;
+  }
 }
 </style>
