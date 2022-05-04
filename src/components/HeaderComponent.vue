@@ -12,7 +12,7 @@
             v-for="(item, index) in navItems"
             :key="index"
             class="col">
-            {{ item }}
+            <a href="#">{{ item }}</a>
           </li>
         </ul>
       </nav>
@@ -44,28 +44,36 @@ export default {
 </script>
 <style lang="scss" scoped>
 header {
-  padding: 1.2rem;
   .site_logo img {
     width: 80px;
+    padding: 0.6rem;
   }
   nav {
-    background-color: white;
+    background-color: $dc-light;
     height: 80px;
     display: flex;
     align-items: center;
     ul {
       list-style: none;
+      height: 100%;
     }
     li {
+      display: flex;
+      align-items: center;
+      height: 100%;
       font-size: 0.8rem;
       padding: 0 1rem;
       font-weight: bold;
       text-transform: uppercase;
       padding-bottom: 0.2rem;
     }
-    .active {
-      color: #0282f9;
-      border-bottom: 3px solid #0282f9;
+    .active, li:hover{
+      color: $dc-primary;
+      border-bottom: 3px solid $dc-primary;
+      margin-bottom: -3px;
+    }
+    .active a, li:hover a{
+      color:  $dc-primary;
     }
   }
 }

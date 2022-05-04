@@ -156,7 +156,7 @@ footer {
     }
   }
   .footer_banner {
-    background-color: #303030;
+    background-color: $dc-dark;
     padding: 2rem;
     .row {
       justify-content: space-between;
@@ -166,10 +166,10 @@ footer {
       }
       button {
         border: unset;
-        color: white;
+        color: $dc-light ;
         padding: 1rem;
         background-color: unset;
-        border: 2px solid #0282f9;
+        border: 2px solid $dc-primary;
       }
     }
   }
