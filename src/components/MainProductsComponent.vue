@@ -6,14 +6,7 @@
       </div>
       <div class="row">
         <div class="col-2" v-for="card in cards" :key="card.series">
-          <div class="img_box">
-            <img :src="card.thumb" :alt="card.type" />
-          </div>
-          <div>
-            <h5>{{ card.series }}</h5>
-
-          </div>
-
+          <CardItem class="card" :thumb="card.thumb" :title="card.series" ></CardItem>
         </div>
       </div>
       <div>
@@ -23,8 +16,12 @@
   </div>
 </template>
 <script>
+import CardItem from "@/components/CardComponent.vue";
 export default {
   name: "MainProducts",
+    components:{
+    CardItem,
+  },
   data() {
     return {
       cards: [
@@ -115,6 +112,7 @@ export default {
       ],
     };
   },
+
 };
 </script>
 
@@ -122,19 +120,19 @@ export default {
 <style lang="scss" scoped>
 .products {
   background-color: $dc-dark;
-  .container{
-      position: relative;
+  .container {
+    position: relative;
   }
-  .series_btn{
-      @include button;
-      background: $dc-primary;
-      position: absolute;
-      left: 0;
-      transform: translateY(-50%);
-      padding: 0.3rem 1rem;
+  .series_btn {
+    @include button;
+    background: $dc-primary;
+    position: absolute;
+    left: 0;
+    transform: translateY(-50%);
+    padding: 0.3rem 1rem;
   }
   .row {
-      padding-top: 1rem;
+    padding-top: 1rem;
     flex-wrap: wrap;
     .col-2 {
       width: calc(100% / 6);
@@ -142,18 +140,7 @@ export default {
       text-align: left;
       height: 250px;
 
-      .img_box {
-        aspect-ratio: 1/1;
-        overflow: hidden;
-        margin-bottom: 1rem;
-        img {
-          width: 100%;
-        }
-      }
-
-      h5 {
-        color: $dc-light;
-      }
+      
     }
   }
   .load_btn {
@@ -161,7 +148,7 @@ export default {
     background: $dc-primary;
     padding: 0.5rem;
     width: 200px;
-    
+
     margin: 1rem 0;
   }
 }
