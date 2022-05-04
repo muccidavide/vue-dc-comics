@@ -11,7 +11,7 @@
                     <h3>{{ footerLinks[0].title }}</h3>
                   </li>
                   <li v-for="link in footerLinks[0].details" :key="link">
-                    <span>{{ link }}</span>
+                    <a href="#">{{ link }}</a>
                   </li>
                 </ul>
                 <ul>
@@ -19,7 +19,7 @@
                     <h3>{{ footerLinks[1].title }}</h3>
                   </li>
                   <li v-for="link in footerLinks[1].details" :key="link">
-                    <span>{{ link }}</span>
+                    <a href="#">{{ link }}</a>
                   </li>
                 </ul>
               </div>
@@ -29,7 +29,7 @@
                     <h3>{{ footerLinks[2].title }}</h3>
                   </li>
                   <li v-for="link in footerLinks[2].details" :key="link">
-                    <span>{{ link }}</span>
+                    <a href="#">{{ link }}</a>
                   </li>
                 </ul>
               </div>
@@ -39,7 +39,7 @@
                     <h3>{{ footerLinks[3].title }}</h3>
                   </li>
                   <li v-for="link in footerLinks[3].details" :key="link">
-                    <span>{{ link }}</span>
+                    <a href="#">{{ link }}</a>
                   </li>
                 </ul>
               </div>
@@ -134,7 +134,7 @@ footer {
       height: 28rem;
       align-items: center;
       .col {
-        color: white;
+        color: $dc-light;
         text-transform: uppercase;
         text-align: start;
         margin-right: 1rem;
@@ -143,13 +143,15 @@ footer {
         }
 
         ul li {
-          margin-bottom: 0.2rem;
-          span {
+          margin-bottom: 0.1rem;
+          a {
+            color: $dc-light;
             opacity: 0.5;
             font-size: 0.7rem;
           }
           h3 {
             opacity: unset;
+            margin: 1rem 0;
           }
         }
       }
@@ -165,11 +167,7 @@ footer {
         padding: 0 0.8rem;
       }
       button {
-        border: unset;
-        color: $dc-light ;
-        padding: 1rem;
-        background-color: unset;
-        border: 2px solid $dc-primary;
+        @include button;
       }
     }
   }
