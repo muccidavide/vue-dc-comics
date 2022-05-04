@@ -4,10 +4,7 @@
       <HeaderSite />
 
       <main id="main_site">
-        <div class="jumbotron">
-          <img src="@/assets/img/jumbotron.jpg" alt="">
-        </div>
-
+        <JumbotronMain></JumbotronMain>
         <MainProducts></MainProducts>
         <MainNav></MainNav>
       </main>
@@ -18,6 +15,7 @@
 
 <script>
 import HeaderSite from "@/components/HeaderComponent.vue";
+import JumbotronMain from "@/components/JumbotronComponent.vue";
 import MainProducts from "@/components/MainProductsComponent.vue"
 import MainNav from "@/components/MainNavComponent.vue";
 import FooterSite from "@/components/FooterComponent.vue";
@@ -26,6 +24,7 @@ export default {
   components: {
     HeaderSite,
     MainNav,
+    JumbotronMain,
     FooterSite,
     MainProducts
   },
@@ -36,8 +35,4 @@ export default {
 <style lang="scss">
 @import "~@/assets/scss/style.scss";
 
-.jumbotron{
-  height: 450px;
-  overflow: hidden;
-}
 </style>
