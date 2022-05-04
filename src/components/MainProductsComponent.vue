@@ -9,7 +9,11 @@
           <div class="img_box">
             <img :src="card.thumb" :alt="card.type" />
           </div>
-          <h5>{{ card.series }}</h5>
+          <div>
+            <h5>{{ card.series }}</h5>
+
+          </div>
+
         </div>
       </div>
       <div>
@@ -134,9 +138,9 @@ export default {
     flex-wrap: wrap;
     .col-2 {
       width: calc(100% / 6);
-      padding: 1rem 1rem;
+      padding: 1rem;
       text-align: left;
-      min-height: 250px;
+      height: 250px;
 
       .img_box {
         aspect-ratio: 1/1;
@@ -157,7 +161,8 @@ export default {
     background: $dc-primary;
     padding: 0.5rem;
     width: 200px;
-    margin-bottom: 1rem;
+    
+    margin: 1rem 0;
   }
 }
 </style>
