@@ -1,7 +1,7 @@
 <template>
 <div>
       <div class="img_box">
-    <img :src="thumb" :alt="titolo" />
+    <img :src="thumb" :alt="title" />
   </div>
   <div>
     <h5>{{ title }}</h5>
