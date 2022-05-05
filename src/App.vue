@@ -2,12 +2,7 @@
   <div id="app">
     <div class="wrapper">
       <HeaderSite />
-
-      <main id="main_site">
-        <JumbotronMain></JumbotronMain>
-        <MainProducts></MainProducts>
-        <MainNav></MainNav>
-      </main>
+      <MainSite></MainSite>
       <FooterSite></FooterSite>
     </div>
   </div>
@@ -15,25 +10,21 @@
 
 <script>
 import HeaderSite from "@/components/HeaderComponent.vue";
-import JumbotronMain from "@/components/JumbotronComponent.vue";
-import MainProducts from "@/components/MainProductsComponent.vue"
-import MainNav from "@/components/MainNavComponent.vue";
+import MainSite from "@/components/MainSiteComponent.vue";
+
 import FooterSite from "@/components/FooterComponent.vue";
 
 export default {
   name: "App",
   components: {
     HeaderSite,
-    MainNav,
-    JumbotronMain,
+    MainSite,
     FooterSite,
-    MainProducts
-  },
 
+  },
 };
 </script>
 
 <style lang="scss">
 @import "~@/assets/scss/style.scss";
-
 </style>

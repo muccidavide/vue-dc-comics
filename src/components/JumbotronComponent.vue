@@ -14,5 +14,9 @@ export default({
 .jumbotron{
   height: 450px;
   overflow: hidden;
+  img{
+    object-fit: cover;
+    width: 100%;
+  }
 }
 </style>

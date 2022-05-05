@@ -59,6 +59,7 @@ export default {
     .col {
       display: flex;
       align-items: center;
+      width: calc(100%/5);
     }
 
     .col img {
@@ -71,5 +72,18 @@ export default {
       color: white;
     }
   }
+}
+
+
+@media screen and (max-width: 992px) {
+  .main_navigation{
+    .row{
+        .row > .col {
+    width: calc(100%/3);
+  }
+
+    }
+  }
+
 }
 </style>
